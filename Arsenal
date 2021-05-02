@@ -17,7 +17,7 @@ local co = Main:CreateCategory("Combat")
 local hey = esp:CreateSection("Esp")
 local cop = co:CreateSection("Combat")
 local mis = co:CreateSection("Misc")
-local cred = co:CreateSection("Credits")
+local cred = ma:CreateSection("Credits")
 
 local Toggle = hey:Create(
     "Toggle",
