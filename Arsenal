@@ -121,5 +121,5 @@ local Text = cred:Create(
 )
 local Text = cred:Create(
     "Textlabel",
-    "Join on Discord:" -- The text for the label
+    "Join on Discord:https://disboard.org/server/830559027489538048" -- The text for the label
 )
