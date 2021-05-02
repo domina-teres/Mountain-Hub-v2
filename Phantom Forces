@@ -1,1 +1,119 @@
--- coming so...
+elseif game.PlaceId == 292439477 then
+local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+
+local Main = library:CreateMain({
+    -- Required
+    projName = "Lmao this Mountain Hub fuck it", -- The name for the UI in game.CoreGui, not the GUI itself.
+    -- Optional
+    Resizable = true, -- Requires MinSize and MaxSize
+    MinSize = UDim2.new(0, 400, 0, 400),
+    MaxSize = UDim2.new(0, 750, 0, 500)
+})
+
+local ma = Main:CreateCategory("Main")
+local esp = Main:CreateCategory("Player ESP")
+local co = Main:CreateCategory("Combat")
+
+local hey = esp:CreateSection("Esp")
+local cop = co:CreateSection("Combat")
+local mis = co:CreateSection("Misc")
+local cred = ma:CreateSection("Credits")
+
+local Toggle = hey:Create(
+    "Toggle",
+    "Box", -- The name of the toggle
+    function(v)
+        loadstring(game:HttpGet("https://pastebin.com/raw/wqQtdDuE"))()
+    end,
+    {
+        -- Required
+        default = false -- Default state
+    }
+)
+local Toggle = hey:Create(
+    "Toggle",
+    "tracers", -- The name of the toggle
+    function(v)
+		loadstring(game:HttpGet("https://pastebin.com/raw/zuHmceu7"))()
+    end,
+    {
+        -- Required
+        default = false -- Default state
+    }
+)
+local Toggle = hey:Create(
+    "Toggle",
+    "box health bar ", -- The name of the toggle
+    function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/domina-teres/scripts/main/esp%20health"))()
+    end,
+    {
+        -- Required
+        default = false -- Default state
+    }
+)
+
+
+
+
+
+local Btn = cop:Create(
+    "Button",
+    "Silent aim", -- The name of the button
+    function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/domina-teres/scripts/main/silent%20aim"))()
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+
+mis:Create(
+    "Slider",
+    "Walkspeed", -- The name of the slider
+    function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end,
+    {
+        -- Required
+        min = 1, -- Smallest value on the slider
+        max = 128, -- Largest value on the slider
+
+        -- Optional
+        default = 2,
+        precise = true, -- Whether to do decimal values
+        changeablevalue = false -- Should the slider be changeable
+    }
+)
+mis:Create(
+    "Slider",
+    "Jumppower", -- The name of the slider
+    function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end,
+    {
+        -- Required
+        min = 1, -- Smallest value on the slider
+        max = 128, -- Largest value on the slider
+
+        -- Optional
+        default = 2,
+        precise = true, -- Whether to do decimal values
+        changeablevalue = false -- Should the slider be changeable
+    }
+)
+
+
+local Text = cred:Create(
+    "Textlabel",
+    "Script by TERES#7678" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Ui by idk" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Join on Discord:https://disboard.org/server/830559027489538048" -- The text for the label
+)
