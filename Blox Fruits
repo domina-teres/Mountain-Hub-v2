@@ -1,0 +1,311 @@
+
+    local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+    
+    local Main = library:CreateMain({
+        -- Required
+        projName = "Lmao this Mountain Hub fuck it", -- The name for the UI in game.CoreGui, not the GUI itself.
+        -- Optional
+        Resizable = true, -- Requires MinSize and MaxSize
+        MinSize = UDim2.new(0, 400, 0, 400),
+        MaxSize = UDim2.new(0, 750, 0, 500)
+    })
+    
+    local ma = Main:CreateCategory("Main")
+    local esp = Main:CreateCategory("ESP")
+    local tele = Main:CreateCategory("Teleport")
+    local co = Main:CreateCategory("Auto Farm")
+    
+    local hey = esp:CreateSection("Esp Items")
+    local cop = co:CreateSection("Auto farm")
+    local cha = ma:CreateSection("Character")
+    local tp = tele:CreateSection("Teleport")
+    local cred = ma:CreateSection("Credits")
+
+    local Btn = hey:Create(
+    "Button",
+    "Fruits esp", -- The name of the button
+    function()
+        for i,v in pairs(game.Workspace:GetDescendants()) do -- grabs everything from workspace
+            if v.ClassName == 'TouchTransmitter' and v.Parent.Name == 'Handle' then -- checks if it has a handle and if its a touchtransmitter
+                local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+                local TextLabel = Instance.new('TextLabel') -- makes text label
+                
+                BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+                BillboardGui.AlwaysOnTop = true -- if its on top or not
+                BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+                BillboardGui.StudsOffset = Vector3.new(0,2,0)
+                
+                TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+                TextLabel.BackgroundColor3 = Color3.new(1,1,1) -- color
+                TextLabel.BackgroundTransparency = 1 -- transparency
+                TextLabel.Size = UDim2.new(1, 0, 1, 0) -- size
+                TextLabel.Text = v.Parent.Parent.Name -- what the label says
+                TextLabel.TextColor3 = Color3.new(1, 0, 0) -- color
+                TextLabel.TextScaled = true -- if the text is scaled or not
+            end
+            end
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = hey:Create(
+    "Button",
+    "Players esp and npcs Esp", -- The name of the button
+    function()
+        for i,v in pairs(game.Workspace:GetDescendants()) do -- grabs everything from workspace
+            if v.ClassName == 'TouchTransmitter' and v.Parent.Name == 'HumanoidRootPart' then -- checks if it has a handle and if its a touchtransmitter
+                local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+                local TextLabel = Instance.new('TextLabel') -- makes text label
+                
+                BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+                BillboardGui.AlwaysOnTop = true -- if its on top or not
+                BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+                BillboardGui.StudsOffset = Vector3.new(0,2,0)
+                
+                TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+                TextLabel.BackgroundColor3 = Color3.new(1,1,1) -- color
+                TextLabel.BackgroundTransparency = 1 -- transparency
+                TextLabel.Size = UDim2.new(1, 0, 1, 0) -- size
+                TextLabel.Text = v.Parent.Parent.Name -- what the label says
+                TextLabel.TextColor3 = Color3.new(1, 0, 0) -- color
+                TextLabel.TextScaled = true -- if the text is scaled or not
+            end
+            end
+
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+
+local Btn = cop:Create(
+    "Button",
+    "Chest Auto farm", -- The name of the button
+    function()
+      
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(5336.07, 81.3244, 4597.77)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(5429.48, 160.566, 780.675)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5509.15, 16.698, 8693.64)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5073.21, 2.65216, -2397.92)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-7995.59, 5680.79, -2005.76)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-3117.45, 208.014, 2048.07)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5274.14, 387.405, -2183.53)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(61506.8, 207.082, 979.012)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-5776.02, 7.34364, 8576.63)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(61671.7, 163.283, 1520.69)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-4582.52, 871.296, -1662.11)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-7995.59, 5680.79, -2005.76)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-2878.49, 23.2418, 2303.77)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-970.972, 12.5049, 3990.19)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+            
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+
+
+local Text = cred:Create(
+    "Textlabel",
+    "Script by TERES#7678" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Ui by idk" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Join on Discord:https://disboard.org/server/830559027489538048" -- The text for the label
+)
+local Btn = tp:Create(
+    "Button",
+    "Jungle", -- The name of the button
+    function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(-1508.65, 37.7, -5.38274)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "Sky", -- The name of the button
+    function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-5033.35, -3.35785, -2469.32)
+        local humanoid = game.Players.LocalPlayer.Character.Humanoid
+        humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.1)
+        pl.CFrame = location
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "colesseum", -- The name of the button
+    function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-1543.26, 1.69704, -3017.28)
+        local humanoid = game.Players.LocalPlayer.Character.Humanoid
+        humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.1)
+        pl.CFrame = location
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "Desert", -- The name of the button
+    function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(998.465, -3.77234, 4099.51)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+
+cha:Create(
+    "Slider",
+    "Walkspeed", -- The name of the slider
+    function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end,
+    {
+        -- Required
+        min = 1, -- Smallest value on the slider
+        max = 1000, -- Largest value on the slider
+
+        -- Optional
+        default = 2,
+        precise = true, -- Whether to do decimal values
+        changeablevalue = false -- Should the slider be changeable
+    }
+)
+cha:Create(
+    "Slider",
+    "Jumppower", -- The name of the slider
+    function(v)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end,
+    {
+        -- Required
+        min = 1, -- Smallest value on the slider
+        max = 1000, -- Largest value on the slider
+
+        -- Optional
+        default = 2,
+        precise = true, -- Whether to do decimal values
+        changeablevalue = false -- Should the slider be changeable
+    }
+)
