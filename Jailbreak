@@ -1,0 +1,171 @@
+local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+    
+local Main = library:CreateMain({
+    -- Required
+    projName = "Lmao this Mountain Hub fuck it", -- The name for the UI in game.CoreGui, not the GUI itself.
+    -- Optional
+    Resizable = true, -- Requires MinSize and MaxSize
+    MinSize = UDim2.new(0, 400, 0, 400),
+    MaxSize = UDim2.new(0, 750, 0, 500)
+})
+
+local ma = Main:CreateCategory("Main")
+local esp = Main:CreateCategory("ESP")
+local tele = Main:CreateCategory("Teleport")
+
+local hey = esp:CreateSection("Esp")
+local cha = ma:CreateSection("Character")
+local mis = ma:CreateSection("Misc")
+local tp = tele:CreateSection("Teleport")
+local cred = ma:CreateSection("Credits")
+
+
+local Text = cred:Create(
+    "Textlabel",
+    "Script by TERES#7678" -- The text for the label
+)
+local Text = hey:Create(
+    "Textlabel",
+    "Coming so.." -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Ui by idk" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Join on Discord:https://disboard.org/server/830559027489538048" -- The text for the label
+)
+
+
+    cha:Create(
+        "Slider",
+        "Jumppower", -- The name of the slider
+        function(v)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end,
+        {
+            -- Required
+            min = 1, -- Smallest value on the slider
+            max = 1000, -- Largest value on the slider
+    
+            -- Optional
+            default = 2,
+            precise = true, -- Whether to do decimal values
+            changeablevalue = false -- Should the slider be changeable
+        }
+    )
+
+    local Btn = mis:Create(
+    "Button",
+    "inf Nitro", -- The name of the button
+    function()
+        game:GetService('Players').LocalPlayer.PlayerGui.MainGui.Nitro.Name = "Nitr"
+
+        game:GetService('Players').LocalPlayer.PlayerGui.ProductGui.Nitro:Destroy()
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = cha:Create(
+    "Button",
+    "Fly", -- The name of the button
+    function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = cha:Create(
+    "Button",
+    "Noclip (prees Q)", -- The name of the button
+    function()
+        noclip = false
+        game:GetService('RunService').Stepped:connect(function()
+        if noclip then
+        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+        end)
+        plr = game.Players.LocalPlayer
+        mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+         
+        if key == "q" then
+        noclip = not noclip
+        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+        end)
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+
+
+local Btn = mis:Create(
+    "Button",
+    "inf Donuts", -- The name of the button
+    function()
+        while wait(2) do
+            game.Workspace.TouchTrigger.Donut.Position = game:GetService("Players").LocalPlayer.Character.Head.Position
+        end
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "Musuem", -- The name of the button
+    function()
+        for i=1,32 do
+            wait(.02)
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1063.02, 117.562, 1218.757) + Vector3.new(1,0,0)
+        end
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "Bank", -- The name of the button
+    function()
+        for i=1,32 do
+            wait(.01)
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.036747, 17.9193821, 797.971521) + Vector3.new(1,0,0)
+        end
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
+local Btn = tp:Create(
+    "Button",
+    "Jewlery", -- The name of the button
+    function()
+        for i=1,32 do
+            wait(0.2)
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(133.300705, 17.9375954, 1316.42407) + Vector3.new(1,0,0)
+        end
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
