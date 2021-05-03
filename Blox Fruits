@@ -309,3 +309,24 @@ cha:Create(
         changeablevalue = false -- Should the slider be changeable
     }
 )
+
+local Btn = cha:Create(
+    "Button",
+    "Click tp", -- The name of the button
+    function()
+        local LocalPlayer = game.Players.LocalPlayer
+        local rp = LocalPlayer.Character.HumanoidRootPart
+        local tool = Instance.new("Tool",LocalPlayer.Backpack)
+        local mouse = LocalPlayer:GetMouse()
+        tool.Name = "click tp"
+        tool.RequiresHandle = false
+        tool.Activated:Connect(function()
+            rp.CFrame = CFrame.new(mouse.Hit.X,mouse.Hit.Y + 4,mouse.Hit.Z)
+        end)
+        
+    end,
+    {
+        -- Optional
+        animated = true -- Default: false
+    }
+)
