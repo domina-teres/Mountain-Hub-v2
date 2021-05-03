@@ -1,0 +1,327 @@
+local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+    
+    local Main = library:CreateMain({
+        -- Required
+        projName = "Lmao this Mountain Hub fuck it", -- The name for the UI in game.CoreGui, not the GUI itself.
+        -- Optional
+        Resizable = true, -- Requires MinSize and MaxSize
+        MinSize = UDim2.new(0, 400, 0, 400),
+        MaxSize = UDim2.new(0, 750, 0, 500)
+    })
+    
+    local ma = Main:CreateCategory("Main")
+    
+    local tele = Main:CreateCategory("Teleport")
+    
+    
+    
+    
+    local cha = ma:CreateSection("Character")
+    local tp = tele:CreateSection("Teleport")
+    local cred = ma:CreateSection("Credits")
+
+
+    cha:Create(
+        "Slider",
+        "Walkspeed", -- The name of the slider
+        function(v)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end,
+        {
+            -- Required
+            min = 1, -- Smallest value on the slider
+            max = 1000, -- Largest value on the slider
+    
+            -- Optional
+            default = 2,
+            precise = true, -- Whether to do decimal values
+            changeablevalue = false -- Should the slider be changeable
+        }
+    )
+    cha:Create(
+        "Slider",
+        "Jumppower", -- The name of the slider
+        function(v)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end,
+        {
+            -- Required
+            min = 1, -- Smallest value on the slider
+            max = 1000, -- Largest value on the slider
+    
+            -- Optional
+            default = 2,
+            precise = true, -- Whether to do decimal values
+            changeablevalue = false -- Should the slider be changeable
+        }
+    )
+
+    local Btn = tp:Create(
+        "Button",
+        "1m Force traning", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-995.77, 71.025, -128.761)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "100k Force traning", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-1225.79, 59.5, 503.642)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "10k Force traning", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(1375, 138.5, -120.6)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "Kagune", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(1734.5, 162.5, -156.495)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "1.5m chakra", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(1643.43, 385.1, 678.26)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "150k chakra", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(943.719, 136.5, 802.488)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "1b Force", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(758.24, 137.045, 946.368)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "100k Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-48.0597, 80.2283, 2049.99)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "1m Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-595.5, 174.5, 760)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "10m Force", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-2227.57, 655.336, 554.697)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "100b Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-2733.19, -224.841, 371.089)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "10k Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-1560.25, 67.8094, -534.638)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "10m Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-1081.44, 234.853, -910.941)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "100m Force", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-9, 63, -1290)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "100m Durability", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(-305, 58.5, -1633)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+    local Btn = tp:Create(
+        "Button",
+        "Grimore", -- The name of the button
+        function()
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+            local location = CFrame.new(1071.34, 141.564, -971.126)
+            local humanoid = game.Players.LocalPlayer.Character.Humanoid
+            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+            wait(0.1)
+            pl.CFrame = location
+        end,
+        {
+            -- Optional
+            animated = true -- Default: false
+        }
+    )
+
+    local Text = cred:Create(
+    "Textlabel",
+    "Script by TERES#7678" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Ui by idk" -- The text for the label
+)
+local Text = cred:Create(
+    "Textlabel",
+    "Join on Discord:https://disboard.org/server/830559027489538048" -- The text for the label
+)
